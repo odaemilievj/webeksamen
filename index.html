@@ -8,41 +8,81 @@
         <link href="css/icons/css/brands.css" rel="stylesheet">
         <link href="css/icons/css/solid.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
     </head>
 
 
     <body>
+        <div id="grid-container">
         <header>
             <nav>
-                <span>
                 <ul>
-                    <li class="logo"><a href="index.html"><img src="bilder/logo1.png" alt="Et logoikon"></a></li>
-                    <li><a href="index.html">Home</a></li>
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="bilder/logo1.png" alt="Et logoikon">
+                        </a>
+                    </li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="products.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="contact-link">Contact</a></li>
                 </ul>
-                </span>
-                
-                <!--Koden for å legge til video i header fant jeg via GitHub CoPilot-->
-                <video autoplay loop muted poster="poster.jpg">
-                    <source src="bilder/mountains.mp4" type="video/mp4">
-                </video>
-                <section id="header-index">
-                    <h1>Compeling headline</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    </p>
-                    <button>Read more about our services</button>
-                </section>
             </nav>
         </header>
 
         <main>
-            <section>
-                <article>
+        <section>
+            <!--Koden for å legge til video i header fant jeg via GitHub CoPilot-->
+            <video autoplay loop muted poster="poster.jpg" class="video">
+                <source src="bilder/mountains.mp4" type="video/mp4">
+            </video>
 
+            <div class="header-index">
+            <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" class="bilde-index">
+            <div class="overlay-text">
+            <h1>Compelling headline</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                </p>
+            <a href="about.html" class="button1">Read more about our services</a>
+            </div>
+            </div>
+        </section>
+
+            <section class="index1">
+                <article>
+                    <h2>Enganging subheading. What can you help your visitors with?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
                 </article>
+            </section>
+
+            <section class="index2">
+                <article>
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h2>About Our Company</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    <a href="about.html">Read more about us</a>
+                </article>
+            </section>
+
+            <section class="index3">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-users" style="color: #000000;"></i>Branding</a></li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <li><a href="#"><i class="fa-solid fa-cloud-arrow-up" style="color: #000000;"></i>Branding</a></li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <li><a href="#"><i class="fa-solid fa-code" style="color: #000000;"></i>Branding</a></li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <li><a href="#"><i class="fa-solid fa-wifi" style="color: #000000;"></i>Branding</a></li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </ul>
             </section>
         </main>
 
@@ -50,12 +90,32 @@
 
         <footer>
             <nav>
-                <li><a href="https://www.facebook.com">Facebook</a></li>
-                <li><a href="https://www.instagram.com">Instagram</a></li>
-                <li><a href="https://www.LinkedIn.com">LinkedIn</a></li>
+                <button onClick="topFunction()" id="top" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
+                <section class="newsletter">
+                    <article>
+                        <h3>Sign up for our newsletter</h3>
+                        <form>
+                            <input type="email" placeholder="oda@epost.no" required>
+                            <button type="submit">Sign me up!</button>
+                        </form>
+                    </article>
+                </section>
 
+                    <section class="logoseksjon">
+                        <img src="bilder/logo1.png" alt="Et logoikon">
+                    </section>
+                </section>
+                
+
+
+                <ul>
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.LinkedIn.com">LinkedIn</a></li>
+                </ul>
             </nav>
         </footer>
+        </div>
     </body>
 
 
