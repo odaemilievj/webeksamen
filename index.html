@@ -21,9 +21,7 @@
                 <ul>
                     <li class="logo">
                         <a href="index.html">
-                            <img src="bilder/logo1.png" alt="Et logoikon">
-                        </a>
-                    </li>
+                            <img src="bilder/logo1.png" alt="Et logoikon"></a></li>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="products.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
@@ -40,8 +38,8 @@
             </video>
 
             <div class="header-index">
-            <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" class="bilde-index">
-            <div class="overlay-text">
+            <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" id="bilde-index">
+            <div id="overlay-text">
             <h1>Compelling headline</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -73,16 +71,14 @@
 
             <section class="index3">
                 <h3>Our Services</h3>
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-users" style="color: #000000;"></i>Branding</a></li>
+                    <a href="#"><i class="fa-solid fa-users" style="color: #000000;"></i>Branding</a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <li><a href="#"><i class="fa-solid fa-cloud-arrow-up" style="color: #000000;"></i>Branding</a></li>
+                    <a href="#"><i class="fa-solid fa-cloud-arrow-up" style="color: #000000;"></i>Branding</a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <li><a href="#"><i class="fa-solid fa-code" style="color: #000000;"></i>Branding</a></li>
+                    <a href="#"><i class="fa-solid fa-code" style="color: #000000;"></i>Branding</a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <li><a href="#"><i class="fa-solid fa-wifi" style="color: #000000;"></i>Branding</a></li>
+                    <a href="#"><i class="fa-solid fa-wifi" style="color: #000000;"></i>Branding</a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </ul>
             </section>
         </main>
 
@@ -90,10 +86,11 @@
 
         <footer>
             <nav>
+                <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
                 <button onClick="topFunction()" id="top" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
                 <section class="newsletter">
                     <article>
-                        <h3>Sign up for our newsletter</h3>
+                        <h4>Sign up for our newsletter</h4>
                         <form>
                             <input type="email" placeholder="oda@epost.no" required>
                             <button type="submit">Sign me up!</button>
@@ -103,19 +100,27 @@
 
                     <section class="logoseksjon">
                         <img src="bilder/logo1.png" alt="Et logoikon">
+                        <p>Companyrights Companyname 2023</p>
                     </section>
-                </section>
+
                 
 
-
-                <ul>
-                    <li><a href="https://www.facebook.com">Facebook</a></li>
-                    <li><a href="https://www.instagram.com">Instagram</a></li>
-                    <li><a href="https://www.LinkedIn.com">LinkedIn</a></li>
-                </ul>
+                <section class="social-icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com"><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></a></li>
+                        <li><a href="https://www.LinkedIn.com"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a></li>
+                    </ul>
+                </section>
             </nav>
         </footer>
         </div>
+        <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
+        <script>
+            function topFunction(){
+                document.documentElement.scrollTop=0;
+                }
+        </script>
     </body>
 
 

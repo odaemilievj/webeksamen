@@ -1,13 +1,15 @@
+
+
 html{
     background-color: #fff;
 }
-
 
 
 body{
     font-family: Roboto, sans-serif;
     margin: 0;
 }
+
 
 #grid-container{
 display: grid;
@@ -40,6 +42,7 @@ footer{
 
 /*Kode for å endre style på button er hentet fra tidligere arbeid, ref. oblig 3*/
 .button1{
+    display: inline-block;
     background-color: #e6bd43;
     border: none;
     padding: 20px;
@@ -47,12 +50,16 @@ footer{
     font-weight: bold;
     text-decoration: none;
     color: black;
-    margin: 30px;
+    margin: 30px auto;
+    width: 210px;
+    height: 50px;
+    max-width: 100%;
 }
 
-.a button1{
+.a .button1{
     text-decoration: none;
     color: black;
+    display: inline-block;
 }
 
 /*Hover-effekt kode har jeg funnet på https://www.w3schools.com/css/css3_buttons.asp*/
@@ -106,17 +113,18 @@ ul li a.active{
     color: black;
     margin-left: 138px;
     margin-right: 138px;
+    display: inline-block;
 }
 
 
-.bilde-index{
+#bilde-index{
     width: 100%;
     height: 520px;
     object-fit: cover;
     opacity: 0.5;
 }
 
-.overlay-text{
+#overlay-text{
     position: absolute;
     top: 0;
     left: 0;
@@ -129,11 +137,11 @@ ul li a.active{
     text-align: center;
 }
 
-.overlay-text h1{
+#overlay-text h1{
     font-size: 40px;
 }
 
-.overlay-text p{
+#overlay-text p{
     font-size: 15px;
     padding-left: 35px;
     padding-right: 35px;
@@ -147,6 +155,13 @@ ul li a.active{
     grid-row: 2;
 }
 
+
+.index1 p{
+    text-align: center;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 100px;
+}
 .index2{
     grid-row: 3;
 }
@@ -157,15 +172,10 @@ ul li a.active{
     margin-top: 100px;
 }
 
-.index1 p{
-    text-align: center;
-    padding-left: 35px;
-    padding-right: 35px;
-    margin-bottom: 100px;
-}
 
 .index2{
     background-color:#e6bd43;
+    text-align: center;
 }
 
 .index2 img{
@@ -191,13 +201,14 @@ ul li a.active{
     border: 3px solid #000;
     text-decoration: none;
     color: #000;
-    display: flex;
-    justify-content: center;
-    margin: 60px;
+    display: inline-block;
+    margin: 60px auto;
     font-weight: bold;
 }
 
-.index3 ul{
+
+
+.index3{
     list-style: none;
     display:flex;
     flex-direction: column;
@@ -205,6 +216,16 @@ ul li a.active{
     font-size: 20px;
     font-weight: bold;
     
+}
+
+.index3 a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+        font-size: 25px;
 }
 
 
@@ -221,18 +242,14 @@ ul li a.active{
     font-weight: normal;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 60px;
 }
 
-ul li a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
 .newsletter{
     background-color: #dddddd;
     padding: 40px;
+    text-align: center;
 }
 
 /*Følgende kode har jeg brukt Github CoPilot for å komme frem til*/
@@ -260,6 +277,8 @@ button[type="submit"] {
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding-bottom: 0px;
 
 }
 
@@ -267,23 +286,251 @@ button[type="submit"] {
     width: 80px;
 }
 
+/*Scroll-to-top funksjon er hentet fra www.w3schools.com*/
 #top{
     position: fixed;
-    bottom: 304px;
+    bottom: 147px;
     right: 9px;
+    z-index: auto;
     border: none;
     outline: none;
     background-color: #000;
     color: white;
-    padding: 24px;
-    font-size:30px;
+    padding: 18px;
+    font-size: 22px;
 }
 
-@media screen and (max-width: 600px) {
+footer p{
+    text-align: center;
+    font-size: 15px;
+    color: #FFF;
+}
+
+.social-icons{
+    background-color: #252525;
+    display: flex;
+}
+
+footer nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-left: 37px;
+}
+
+footer nav ul li{
+    margin-right: 44px;
+    margin-left: 33px;
+
+}
+
+
+
+/*portfolio-siden*/
+
+#bilde-port{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+#overlay-text-port{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #000;
+    display:grid;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    text-align: center;
+}
+
+#overlay-text-port h1{
+    font-size: 40px;
+    margin-top: 160px;
+}
+
+.port-buttons{
+    padding: 10px;
+    border: 2px solid #000;
+    text-decoration: none;
+    color: #000;
+    margin: 8px;
+    font-weight: bold;
+    display:inline-block;
+}
+
+section ul{
+    display:flex;
+    flex-wrap: wrap;
+    list-style:none;
+    padding: 0px;
+}
+
+#port1 h2{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 25px;
+}
+
+.portfolio-seksjon{
+    padding: 32px;
+}
+.underline{
+    border-bottom: 3px solid #e6bd43;
+    padding-bottom: 10px;
+}
+
+section h3{
+        margin-top: 60px;
+        margin-bottom: 60px;
+        font-size: 25px;
+}
+
+.portfolio-seksjon img{
+    width: 100%;
+}
+
+
+/*About-siden*/
+
+#bilde-about{
+    width: 100%;
+    height: 824px;
+    object-fit: cover;
+    position: relative;
+}
+
+#overlay-box{
+    background-color: rgba(255, 255, 255, 0.8);
+    color:#000;
+    padding: 34px;
+    width: 47%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#overlay-overskrift{
+    font-size: 15px;
+    font-weight: normal;
+    text-align: left;
+}
+
+#overlay-about{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+#contact-button{
+    display: inline-block;
+    background-color: #e6bd43;
+    border: none;
+    padding: 9px;
+    padding-right: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin: 30px auto;
+    width: 210px;
+    height: 50px;
+    max-width: 100%;
+}
+
+#clients{
+    background-color:#e6bd43;
+    text-align: center;
+}
+
+#clients h3{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#clients img{
+    margin: 20px;
+    width: 130px;
+}
+
+#skjema{
+    padding: 28px;
+    background-color: #f7f7f7;
+}
+
+#skjema h3{
+    text-align: center;
+}
+
+#skjema p{
+    font-size: 20px;
+    font-weight: bold;
+}
+form label {
+    display: block;
+    margin-top: 20px;
+}
+
+form input[type="text"], form textarea {
+    width: 90%;
+    border-style: none;
+    padding: 17px;
+    color: #000;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    border-style: none;
+    background-color:#e6bd43;
+    font-weight: bold;
+}
+
+form textarea{
+    height: 125px;
+}
+
+#contact-information{
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+#contact-information h3{
+    margin-bottom: 13px;
+    margin-top: 0px;
+}
+
+#contact-information ul{
+    flex-direction: column;
+}
+
+#contac-information ul li{
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 600px) {
 .video{
     display: none;
 }
 
+#bilde-about{
+    height: 490px;
+}
 
+#overlay-box{
+    top: 107%;
+    left: 70%;
+}
 
 }

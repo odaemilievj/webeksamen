@@ -14,6 +14,7 @@
 
 
     <body>
+        <div id="grid-container">
         <header>
             <nav>
                 <ul>
@@ -32,48 +33,74 @@
 
         <main>
             <section>
-                <h2>Design</h2>
+                <div class="header-index">
+                    <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" id="bilde-port">
+                    <div id="overlay-text-port">
+                    <h1>Portfolio</h1>
+                </div>
+                </div>
+            </section>
 
+            <section class="portfolio-seksjon">
+                <h2 class="underline">Explore previous jobs</h2>
+                <ul>
+                    <li><a href="branding" class="port-buttons">Branding</a></li>
+                    <li><a href="design" class="port-buttons">Design</a></li>
+                    <li><a href="design" class="port-buttons">Development</a></li>
+                </ul>
+            </section>
+            
+            <section class="portfolio-seksjon">
+                <h3 class="underline">Branding</h3>
                 <article>
-
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
                 </article>
 
                 <article>
-
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
                 </article>
-
+                    
                 <article>
-
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
                 </article>
             </section>
 
-            <section>
-                <h2>Branding</h2>
+            <section class="portfolio-seksjon">
+                <h3 class="underline">Design</h3>
                 <article>
-
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
                 </article>
 
                 <article>
-
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
+                </article>
+                    
+                <article>
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
                 </article>
 
                 <article>
-
-                </article>
-
-                <article>
-
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
                 </article>
             </section>
 
-            <section>
-                <h2>Development</h2>
+            <section class="portfolio-seksjon">
+                <h3 class="underline">Development</h3>
                 <article>
-
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
                 </article>
 
                 <article>
-
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <h4>Et harum quidem</h4>
                 </article>
             </section>
 
@@ -83,9 +110,25 @@
         
         <footer>
             <nav>
+                <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
+                <button onClick="topFunction()" id="top" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
+                
+                    <section class="logoseksjon">
+                        <img src="bilder/logo1.png" alt="Et logoikon">
+                        <p>Companyrights Companyname 2023</p>
+                    </section>
+                
 
+                <section class="social-icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com"><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></a></li>
+                        <li><a href="https://www.LinkedIn.com"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a></li>
+                    </ul>
+                </section>
             </nav>
         </footer>
+        </div>
     </body>
 
 
