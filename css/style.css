@@ -1,5 +1,4 @@
 
-
 html{
     background-color: #fff;
 }
@@ -54,23 +53,11 @@ footer{
     width: 210px;
     height: 50px;
     max-width: 100%;
-}
-
-.a .button1{
     text-decoration: none;
     color: black;
     display: inline-block;
 }
 
-/*Hover-effekt kode har jeg funnet på https://www.w3schools.com/css/css3_buttons.asp*/
-.button1:hover{
-    background-color: #000;
-    color: #e6bd43;
-}
-
-.button1:hover a{
-    color:#e6bd43;
-}
 
 header nav ul{
     gap: 1rem;
@@ -84,8 +71,11 @@ ul {
     display: flex;
 }
 
-.logo img{
+nav span img{
     width: 80px;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
 }
 
 nav ul li{
@@ -97,34 +87,37 @@ ul li a{
     color: black;
 }
 
-/*a.active koden er hentet fra https://www.w3schools.com/css/css_link.asp*/
-ul li a.active{
-    text-decoration: underline;
-    text-decoration-color:#e6bd43;
-    font-weight: bold;
-}
-
-.contact-link{
+nav ul li .contact-link{
     background-color: #e6bd43;
     border: none;
     padding: 10px;
     font-weight: bold;
     text-decoration: none;
     color: black;
-    margin-left: 138px;
-    margin-right: 138px;
     display: inline-block;
+
+}
+
+/*a.active koden er hentet fra https://www.w3schools.com/css/css_link.asp*/
+ul li a.active{
+    text-decoration: underline;
+    text-decoration-color:#e6bd43;
+    font-weight: bold;
+    text-decoration-thickness: 2px;
+
 }
 
 
-#bilde-index{
+
+
+.bilde-index{
     width: 100%;
     height: 520px;
     object-fit: cover;
     opacity: 0.5;
 }
 
-#overlay-text{
+.overlay-text{
     position: absolute;
     top: 0;
     left: 0;
@@ -137,11 +130,11 @@ ul li a.active{
     text-align: center;
 }
 
-#overlay-text h1{
+.overlay-text h1{
     font-size: 40px;
 }
 
-#overlay-text p{
+.overlay-text p{
     font-size: 15px;
     padding-left: 35px;
     padding-right: 35px;
@@ -175,25 +168,22 @@ ul li a.active{
 
 .index2{
     background-color:#e6bd43;
-    text-align: center;
 }
 
 .index2 img{
-    width: 260px;
-    margin: 55px;
+    width: 80%;
+}
+
+.index2 article{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
 }
 
 .index2 h2{
     font-size: 28px;
-    text-align: center;
 }
-
-.index2 p{
-    text-align: center;
-    padding-left: 35px;
-    padding-right: 35px;
-}
-
 
 
 .index2 a{
@@ -202,7 +192,6 @@ ul li a.active{
     text-decoration: none;
     color: #000;
     display: inline-block;
-    margin: 60px auto;
     font-weight: bold;
 }
 
@@ -384,6 +373,8 @@ section ul{
 .underline{
     border-bottom: 3px solid #e6bd43;
     padding-bottom: 10px;
+    margin: 35px;
+    font-size: 30px
 }
 
 section h3{
@@ -519,18 +510,114 @@ form textarea{
     margin-bottom: 10px;
 }
 
-@media screen and (min-width: 600px) {
 .video{
     display: none;
 }
+@media screen and (min-width: 600px) {
 
-#bilde-about{
-    height: 490px;
+    /*Grid for desktop, 3 kolonner, har sett på oblig3-oppgaven min for å huske hvordan det skal skrives*/
+#grid-container{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+                            "main main main"
+                            "footer footer footer";
+    }
+
+
+.video{
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    opacity: 0.5;
+    position: relative;
 }
 
-#overlay-box{
-    top: 107%;
-    left: 70%;
+
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: #000;
+    display:grid;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    text-align: center;
 }
 
+
+.bilde-index{
+    display: none;
+}
+
+/*Hover-effekt kode har jeg funnet på https://www.w3schools.com/css/css3_buttons.asp*/
+.button1:hover{
+    background-color: #000;
+    color: #e6bd43;
+}
+
+header nav ul{
+    display: flex;
+    padding-left: 30px;
+    align-items: baseline;
+    float: right;
+    margin-top: 50px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+nav span img{
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    
+}
+
+
+.contact-link:hover{
+    background-color: #000;
+    color: #e6bd43;
+    
+}
+
+.index2{
+    display: flex;
+    background-color: #fff;
+    border: 2px solid #000;
+    margin: 10px;
+}
+
+.index2 img{
+    width: auto;
+    margin: 49px;
+    display:flex;
+    margin-left: 80px;
+}
+
+.portfolio-seksjon{
+    display: flex;
+    padding: 32px;
+    flex-wrap: wrap;
+}
+
+img .portfolio-seksjon{
+    width: 692px;
+}
+/*Følgende kode er hentet fra https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow (Gjelder 
+flex-grow-delen)
+For å få artikkelkortene til å øke i størrelse når jeg hovrer over har jeg brukt: 
+https://nestedsoftware.com/2019/11/05/card-with-expand-on-hover-effect-2ccm.200941.html*/ 
+.portfolio-seksjon article{
+    flex-grow: 1;
+    margin: 10px;
+    max-width: 692px;
+    transition: transform 0.90s ease-in-out;
+}
+
+.portfolio-seksjon article:hover{
+    transform: scale(1.05);
+}
 }
