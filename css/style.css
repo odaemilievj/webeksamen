@@ -31,6 +31,7 @@ main{
 
 footer{
     grid-area: footer;
+    background-color:#252525;
 }
 
 
@@ -107,9 +108,6 @@ ul li a.active{
 
 }
 
-
-
-
 .bilde-index{
     width: 100%;
     height: 520px;
@@ -121,7 +119,6 @@ ul li a.active{
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px;
     color: #000;
     display:grid;
     width: 100%;
@@ -168,18 +165,13 @@ ul li a.active{
 
 .index2{
     background-color:#e6bd43;
+    padding: 40px;
 }
 
 .index2 img{
-    width: 80%;
+    width: 100%;
 }
 
-.index2 article{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-}
 
 .index2 h2{
     font-size: 28px;
@@ -278,14 +270,14 @@ button[type="submit"] {
 /*Scroll-to-top funksjon er hentet fra www.w3schools.com*/
 #top{
     position: fixed;
-    bottom: 147px;
-    right: 9px;
+    bottom: 156px;
+    right: 26px;
     z-index: auto;
     border: none;
     outline: none;
     background-color: #000;
     color: white;
-    padding: 18px;
+    padding: 12px;
     font-size: 22px;
 }
 
@@ -295,24 +287,16 @@ footer p{
     color: #FFF;
 }
 
-.social-icons{
-    background-color: #252525;
-    display: flex;
-}
 
 footer nav ul{
     list-style: none;
-    display: flex;
-    justify-content: space-between;
     font-size: 30px;
-    margin-left: 37px;
+    margin: 0px;
+    justify-content: space-around;
+    display: flex;
+    padding-left: 0px;
 }
 
-footer nav ul li{
-    margin-right: 44px;
-    margin-left: 33px;
-
-}
 
 
 
@@ -325,18 +309,6 @@ footer nav ul li{
     opacity: 0.5;
 }
 
-#overlay-text-port{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    color: #000;
-    display:grid;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    text-align: center;
-}
 
 #overlay-text-port h1{
     font-size: 40px;
@@ -355,7 +327,7 @@ footer nav ul li{
 
 section ul{
     display:flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     list-style:none;
     padding: 0px;
 }
@@ -513,6 +485,10 @@ form textarea{
 .video{
     display: none;
 }
+
+.full-width-iframe{
+    width: 100%;
+}
 @media screen and (min-width: 600px) {
 
     /*Grid for desktop, 3 kolonner, har sett på oblig3-oppgaven min for å huske hvordan det skal skrives*/
@@ -539,7 +515,6 @@ form textarea{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px;
     color: #000;
     display:grid;
     width: 100%;
@@ -566,13 +541,14 @@ header nav ul{
     float: right;
     margin-top: 50px;
     margin-right: 20px;
-    font-size: 18px;
+    font-size: 21px;
 }
 
 nav span img{
     float: left;
     margin-bottom: 20px;
     margin-left: 20px;
+    width: 120px;
     
 }
 
@@ -590,6 +566,11 @@ nav span img{
     margin: 10px;
 }
 
+.index2 h2{
+    margin-top: 100px;
+}
+
+
 .index2 img{
     width: auto;
     margin: 49px;
@@ -602,6 +583,13 @@ nav span img{
     padding: 32px;
     flex-wrap: wrap;
 }
+
+.index3{
+    flex-direction: row;
+    padding: 80px;
+}
+
+.index3 h3{}
 
 img .portfolio-seksjon{
     width: 692px;
@@ -620,4 +608,49 @@ https://nestedsoftware.com/2019/11/05/card-with-expand-on-hover-effect-2ccm.2009
 .portfolio-seksjon article:hover{
     transform: scale(1.05);
 }
+.index3 article ul{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 231px;
+}
+
+footer nav ul li{
+    margin-right: 20px;
+}
+
+footer p{
+    font-size: 20px;
+}
+
+footer nav ul{
+    font-size: 46px;
+}
+
+/*Følgende kode har jeg brukt Github CoPilot for å komme frem til*/
+input[type="email"]{
+    width: 16%;
+    border-style: none;
+    padding: 20px;
+    color: #000;
+}
+
+button[type="submit"] {
+    padding: 18px;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.newsletter h4{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
 }

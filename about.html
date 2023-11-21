@@ -14,6 +14,7 @@
 
 
     <body>
+        <div id="grid-container">
         <header>
             <nav>
                 <span>
@@ -46,15 +47,19 @@
             </section>
 
             <section class="index3">
-                <h3>Our Services</h3>
-                    <a href="#"><i class="fa-solid fa-users" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"><i class="fa-solid fa-cloud-arrow-up" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"><i class="fa-solid fa-code" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#"><i class="fa-solid fa-wifi" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <article>
+                    <h3>Our Services</h3>
+                    <ul>
+                    <li><a href="#"><i class="fa-solid fa-users" style="color: #000000;"></i>Branding</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                   <li><a href="#"><i class="fa-solid fa-cloud-arrow-up" style="color: #000000;"></i>Branding</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <li><a href="#"><i class="fa-solid fa-code" style="color: #000000;"></i>Branding</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <li><a href="#"><i class="fa-solid fa-wifi" style="color: #000000;"></i>Branding</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                </ul>
+                </article>
             </section>
 
             <section id="clients">
@@ -71,7 +76,7 @@
                 <p>Send us a message</p>
                 <form action="/submit_form" method="post">
                     <label for="name">Name</label><br>
-                    <input type="text" id="name" name="name" placeholder="Ola Nordmann"><br>
+                    <input type="text" id="subject" name="name" placeholder="Ola Nordmann"><br>
                     <label for="subject">Subject</label><br>
                     <input type="text" id="name" name="name" placeholder="Subject"><br>
                     <label for="message">Message</label><br>
@@ -93,7 +98,7 @@
             </section>
 
             <section>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.1884410541143!2d11.350233741435268!3d59.12924747462404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2zSMO4Z3Nrb2xlbiBpIMOYc3Rmb2xk!5e0!3m2!1sno!2sno!4v1700434352355!5m2!1sno!2sno" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.1884410541143!2d11.350233741435268!3d59.12924747462404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2zSMO4Z3Nrb2xlbiBpIMOYc3Rmb2xk!5e0!3m2!1sno!2sno!4v1700434352355!5m2!1sno!2sno" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="full-width-iframe"></iframe>
             </section>
         </main>
 
@@ -101,31 +106,32 @@
         
         <footer>
             <nav>
-                <section class="logoseksjon">
-                    <img src="bilder/logo1.png" alt="Et logoikon">
-                    <p>Companyrights Companyname 2023</p>
-                </section>
+                <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
+                <button onClick="topFunction()" id="top" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
+                    <article class="newsletter">
+                        <h4>Sign up for our newsletter</h4>
+                        <form>
+                            <input type="email" placeholder="oda@epost.no" required>
+                            <button type="submit">Sign me up!</button>
+                        </form>
+                    </article>
 
-            
 
-            <section class="social-icons">
-                <ul>
-                    <li><a href="https://www.facebook.com"><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i></a></li>
-                    <li><a href="https://www.instagram.com"><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></a></li>
-                    <li><a href="https://www.LinkedIn.com"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a></li>
-                </ul>
-            </section>
-        </nav>
-    </footer>
-    </div>
-    <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
-    <script>
-        function topFunction(){
-            document.documentElement.scrollTop=0;
-            }
-    </script>
+                
+                    <div class="footer-flex">
+                    <span>
+                        <img src="bilder/logo1.png" alt="Et logoikon">
+                    </span>
+                        <p>Companyrights Companyname 2023</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com"><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></a></li>
+                        <li><a href="https://www.LinkedIn.com"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a></li>
+                    </ul>
+                </div>
             </nav>
         </footer>
+        </div>
     </body>
 
 
