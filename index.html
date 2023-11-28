@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Eksamensoppgave</title>
+        <title>Velkommen til min eksamensbesvarelse!</title>
+        <!--Kode til metadata har jeg brukt min egen oblig4 som referanse for å huske hva vi har gått igjennom i forelesning-->
+        <meta name="description" content="Forsiden av min eksamensbesvarelse">
+        <meta name="keywords" content="HTML, CSS, JavaScript"> <!--Denne linjen har jeg brukt GitHub CoPilot til, har med Javascript da jeg har brukt det for å få til "Scroll-to-top" funksjon-->
+        <meta name="author" content="Oda Emilie V. Jakobsen">
         <link href="css/icons/css/fontawesome.css" rel="stylesheet">
         <link href="css/icons/css/brands.css" rel="stylesheet">
         <link href="css/icons/css/solid.css" rel="stylesheet">
@@ -11,78 +15,88 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+        <!--Følgende kode er Opengraph metadata. I og med at jeg ikke har 
+        publisert nettstedet, velger jeg å sette en # der URL-en til nettstedet skulle vært
+        Kilde er eget arbeid fra oblig4-->
+        <meta property="ogtitle" content="Velkommen til min eksamensbesvarelse!">
+        <meta property="og:description" content="Dette er min eksamensbesvarelse i Webutvikling.">
+        <meta property="og:image" content="https://placehold.co/600x400/EEE/31343C">
+        <meta property="og:url" content="#">
+        <meta property="og:type" content="'website', 'pictures', 'work'">
+        <!--For å legge til favicon har jeg brukt https://www.w3schools.com/html/html_favicon.asp-->
+        <link rel="icon" href="bilder/logo1.png" type="image/x-icon">
     </head>
 
 
     <body>
         <div id="grid-container">
         <header>
-            <nav>
+            <nav aria-label="Main navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <span>
-                    <a href="index.html" class="logo">
-                    <img src="bilder/logo1.png" alt="Et logoikon"></a>
+                    <a href="index.html" class="logo" title="Home" itemprop="url">
+                    <img src="bilder/logo1.png" alt="Company-logo" itemprop="image"></a> <!--Innhold da dette bildet har en funksjon-->
                 </span>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="products.html">Portfolio</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#" class="contact-link">Contact</a></li>
+                    <li><a href="index.html" class="active" title="Home" itemprop="url">Home</a></li> <!--Kode for å få understrek under aktiv link er hentet fra https://www.w3schools.com/css/css_link.asp-->
+                    <li><a href="products.html" title="Portfolio" itemprop="url">Portfolio</a></li>
+                    <li><a href="about.html" title="About" itemprop="url">About</a></li>
+                    <!--Koden for å linke til seksjon på annet HTML-dokument brukte jeg GitHub Copilot for å finne ut av-->
+                    <li><a href="about.html#contact-skjema" class="contact-link" title="Contact" itemprop="url">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <section>
-
-    
-                <div class="header-index">
+            <section aria-labelledby="headline">
+                <div class="header-index" role="banner">
                                     <!--Koden for å legge til video i header fant jeg via GitHub CoPilot-->
-                <video autoplay loop muted poster="poster.jpg" class="video">
+                <video autoplay loop muted poster="poster.jpg" class="video" title="Background video"> <!--Pynt-->
                     <source src="bilder/mountains.mp4" type="video/mp4">
                 </video>
-                <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" class="bilde-index">
+                <!--Kilde til bildet: https://pixabay.com/no/photos/penn-notisbok-notisblokk-dagbok-4337524/-->
+                <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" class="bilde-index"> <!--Pynt-->
                 <div class="overlay-text">
-                <h1>Compelling headline</h1>
+                <h1 id="headline">Compelling headline</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                <a href="about.html" class="button1">Read more about our services</a>
+                <a href="#our-services" class="button1 hover-black" title="Read more about our services">Read more about our services</a>
                 </div>
                 </div>
             </section>
 
-            <section class="index1">
+            <section class="index1" aria-labelledby="subheading1" itemscope itemtype="https://schema.org/Article">
                 <article>
-                    <h2>Enganging subheading. What can you help your visitors with?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    <h2 id="subheading1" itemprop="headline">Enganging subheading. What can you help your visitors with?</h2>
+                    <p itemprop="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut<br>labore et dolore magna aliqua. 
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
                 </article>
             </section>
 
-            <section class="index2">
+            <section class="index2" aria-labelledby="subheading2" itemscope itemtype="https://schema.org/Article">
                 <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde" itemprop="image">
                 </article>
                 <article>
-                    <h2>About Our Company</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    <h2 id="subheading2" itemprop="headline">About Our Company</h2>
+                    <p itemprop="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do<br>eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                    <a href="about.html">Read more about us</a>
+                    <a href="about.html" class="hover-black" itemprop="url">Read more about us</a>
                 </article>
             </section>
 
             <section class="index3">
                 <article>
-                    <h3>Our Services</h3>
+                    <h3 id="our-services">Our Services</h3>
                     <ul>
                     <li><a href="#"><i class="fa-solid fa-users" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p></li>
                    <li><a href="#"><i class="fa-solid fa-cloud-arrow-up" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p></li>
                     <li><a href="#"><i class="fa-solid fa-code" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p></li>
                     <li><a href="#"><i class="fa-solid fa-wifi" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p></li>
                 </ul>
                 </article>
             </section>
@@ -91,14 +105,14 @@
 
 
         <footer>
-            <nav>
-                <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
+            <nav aria-label="Footer navigation">
+                <!--Scroll to top funksjon er hentet https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
                 <button onClick="topFunction()" id="top" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
                     <article class="newsletter">
                         <h4>Sign up for our newsletter</h4>
                         <form>
-                            <input type="email" placeholder="oda@epost.no" required>
-                            <button type="submit">Sign me up!</button>
+                            <input type="email" placeholder="oda@epost.no">
+                            <button type="submit" class="hover-black">Sign me up!</button>
                         </form>
                     </article>
 
@@ -106,7 +120,8 @@
                 
                     <div class="footer-flex">
                     <span>
-                        <img src="bilder/logo1.png" alt="Et logoikon">
+                        <a href="index.html" class="logo">
+                            <img src="bilder/logo1.png" alt="Et logoikon"></a> <!--Innhold da dette bildet har en funksjon(home)-->
                     </span>
                         <p>Companyrights Companyname 2023</p>
                     <ul>
@@ -118,7 +133,7 @@
             </nav>
         </footer>
         </div>
-        <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
+        <!--Scroll to top funksjon er hentet fra https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
         <script>
             function topFunction(){
                 document.documentElement.scrollTop=0;

@@ -68,9 +68,6 @@ header nav ul{
     padding-left: 0px;
 }
 
-ul {
-    display: flex;
-}
 
 nav span img{
     width: 80px;
@@ -120,7 +117,6 @@ ul li a.active{
     top: 0;
     left: 0;
     color: #000;
-    display:grid;
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -140,11 +136,6 @@ ul li a.active{
     position: relative;
 }
 
-.index1{
-    display: grid;
-    grid-row: 2;
-}
-
 
 .index1 p{
     text-align: center;
@@ -152,9 +143,7 @@ ul li a.active{
     padding-right: 35px;
     margin-bottom: 100px;
 }
-.index2{
-    grid-row: 3;
-}
+
 
 .index1 h2{
     font-size: 28px;
@@ -190,11 +179,7 @@ ul li a.active{
 
 
 .index3{
-    list-style: none;
     display:flex;
-    flex-direction: column;
-    padding: 0px;
-    font-size: 20px;
     font-weight: bold;
     
 }
@@ -214,7 +199,7 @@ ul li a.active{
     text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .index3 p{
@@ -226,6 +211,9 @@ ul li a.active{
     margin-bottom: 60px;
 }
 
+.index3 ul{
+    justify-content: center;
+}
 
 .newsletter{
     background-color: #dddddd;
@@ -267,7 +255,7 @@ button[type="submit"] {
     width: 80px;
 }
 
-/*Scroll-to-top funksjon er hentet fra www.w3schools.com*/
+/*Scroll-to-top funksjon er hentet fra www.w3schools.com, kilde er i HTML-kode og dokumentasjon*/
 #top{
     position: fixed;
     bottom: 156px;
@@ -327,7 +315,7 @@ footer nav ul{
 
 section ul{
     display:flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     list-style:none;
     padding: 0px;
 }
@@ -358,6 +346,7 @@ section h3{
 .portfolio-seksjon img{
     width: 100%;
 }
+
 
 
 /*About-siden*/
@@ -399,16 +388,12 @@ section h3{
 
 
 #contact-button{
-    display: inline-block;
     background-color: #e6bd43;
-    border: none;
     padding: 9px;
-    padding-right: 0px;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     color: black;
-    margin: 30px auto;
     width: 210px;
     height: 50px;
     max-width: 100%;
@@ -429,10 +414,6 @@ section h3{
     width: 130px;
 }
 
-#skjema{
-    padding: 28px;
-    background-color: #f7f7f7;
-}
 
 #skjema h3{
     text-align: center;
@@ -459,15 +440,16 @@ form input[type="submit"] {
     border-style: none;
     background-color:#e6bd43;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 form textarea{
     height: 125px;
 }
 
-#contact-information{
-    background-color: #f7f7f7;
-    padding: 20px;
+#contact-information h4{
+    font-size: 20px;
+    margin-top: 60px;
 }
 #contact-information h3{
     margin-bottom: 13px;
@@ -489,6 +471,41 @@ form textarea{
 .full-width-iframe{
     width: 100%;
 }
+
+#contact-information ul li{
+    margin-top: 20px;
+} 
+
+.icon{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+#overlay-box-about{
+    background-color: rgba(255, 255, 255, 0.8);
+    color:#000;
+    padding: 34px;
+    width: 47%;
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#contact-skjema{
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+#contact-skjema h3{
+    text-align: center;
+}
+
+
 @media screen and (min-width: 600px) {
 
     /*Grid for desktop, 3 kolonner, har sett på oblig3-oppgaven min for å huske hvordan det skal skrives*/
@@ -515,12 +532,6 @@ form textarea{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #000;
-    display:grid;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    text-align: center;
 }
 
 
@@ -529,9 +540,14 @@ form textarea{
 }
 
 /*Hover-effekt kode har jeg funnet på https://www.w3schools.com/css/css3_buttons.asp*/
-.button1:hover{
-    background-color: #000;
+.hover-black:hover{
+    background-color: #252525;
     color: #e6bd43;
+}
+
+.hover-yellow:hover{
+    background-color:#e6bd43;
+    color:#252525;
 }
 
 header nav ul{
@@ -554,16 +570,14 @@ nav span img{
 
 
 .contact-link:hover{
-    background-color: #000;
+    background-color: #252525;
     color: #e6bd43;
     
 }
 
+
 .index2{
     display: flex;
-    background-color: #fff;
-    border: 2px solid #000;
-    margin: 10px;
 }
 
 .index2 h2{
@@ -586,10 +600,9 @@ nav span img{
 
 .index3{
     flex-direction: row;
-    padding: 80px;
+    justify-content: center;
 }
 
-.index3 h3{}
 
 img .portfolio-seksjon{
     width: 692px;
@@ -653,4 +666,48 @@ button[type="submit"] {
     margin-bottom: 20px;
 }
 
+#bilde-about{
+    height: 500px;
+}
+
+#overlay-box-about{
+    top: 55%;
+    left: 70%;
+}
+
+#contact-information h4{
+    margin-top: 20px;
+}
+
+
+#skjema{
+    padding-left: 118px;
+    width: 45%;
+    margin: 0px;
+}
+
+#contact-information ul li{
+    margin-bottom: 20px;
+}
+
+
+/*Følgende kode har jeg brukt Github CoPilot for å komme frem til*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#skjema, #contact-information{
+    width: 80%;
+}
+/*-------------------*/
+
+#contact-skjema h3{
+    font-size: 35px;
+}
+
+#design-bilde{
+    width: 665px;
+}
 }

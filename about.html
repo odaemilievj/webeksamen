@@ -3,37 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Eksamensoppgave</title>
+        <title>Lurer du på noe? Kontakt oss!</title>
+        <!--Kode til metadata har jeg brukt min egen oblig4 som referanse for å huske hva vi har gått igjennom i forelesning-->
+        <meta name="description" content="About-siden av min eksamensbesvarelse">
+        <meta name="keywords" content="HTML, CSS, JavaScript"> <!--Denne linjen har jeg brukt GitHub CoPilot til, har med Javascript da jeg har brukt det for å få til "Scroll-to-top" funksjon-->
+        <meta name="author" content="Oda Emilie V. Jakobsen">
         <link href="css/icons/css/fontawesome.css" rel="stylesheet">
         <link href="css/icons/css/brands.css" rel="stylesheet">
         <link href="css/icons/css/solid.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+                <!--Følgende kode er Opengraph metadata. I og med at jeg ikke har 
+        publisert nettstedet, velger jeg å sette en # der URL-en til nettstedet skulle vært-->
+        <meta property="ogtitle" content="Velkommen til min eksamensbesvarelse!">
+        <meta property="og:description" content="Ønsker du å komme i kontakt med oss?">
+        <meta property="og:image" content="https://placehold.co/600x400/EEE/31343C">
+        <meta property="og:url" content="#">
+        <meta property="og:type" content="'website', 'pictures', 'work'">
+        <!--For å legge til favicon har jeg brukt https://www.w3schools.com/html/html_favicon.asp-->
+        <link rel="icon" href="bilder/logo1.png" type="image/x-icon">
     </head>
 
 
     <body>
         <div id="grid-container">
-        <header>
-            <nav>
-                <span>
-                    <a href="index.html" class="logo">
-                    <img src="bilder/logo1.png" alt="Et logoikon"></a>
-                </span>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Portfolio</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+            <header>
+                <nav aria-label="Main navigation">
+                    <span>
+                        <a href="index.html" class="logo" title="Home">
+                        <img src="bilder/logo1.png" alt="Company-logo"></a> <!--Innhold da dette bildet har en funksjon-->
+                    </span>
+                    <ul>
+                        <li><a href="index.html" title="Home">Home</a></li>
+                        <li><a href="products.html" title="Portfolio">Portfolio</a></li>
+                        <li><a href="about.html" class="active" title="About">About</a></li>
+                        <!--Koden for å linke til seksjon på annet HTML-dokument brukte jeg GitHub Copilot for å finne ut av-->
+                        <li><a href="about.html#contact-skjema" class="contact-link" title="Contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
 
         <main>
-            <section>
-                    <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" id="bilde-about">
-                    <div id="overlay-box">
+            <section> <!--Kilde til bildet: https://pixabay.com/no/photos/penn-notisbok-notisblokk-dagbok-4337524/-->
+                    <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" id="bilde-about" title="Laptop, mobil, headset og kaffekopp"> <!--Pynt-->
+                    <div id="overlay-box-about">
                         <h1 id="overlay-overskrift">Company name</h1>
                         <p id="overlay-about">About Our Company</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -42,7 +56,7 @@
                             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                    <a href="about.html" id="contact-button">Get in touch with us</a>
+                    <a href="about.html" id="contact-button" class="hover-black">Get in touch with us</a>
                     </div>
             </section>
 
@@ -51,13 +65,13 @@
                     <h3>Our Services</h3>
                     <ul>
                     <li><a href="#"><i class="fa-solid fa-users" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p></li>
                    <li><a href="#"><i class="fa-solid fa-cloud-arrow-up" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p></li>
                     <li><a href="#"><i class="fa-solid fa-code" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p></li>
                     <li><a href="#"><i class="fa-solid fa-wifi" style="color: #000000;"></i>Branding</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p></li>
                 </ul>
                 </article>
             </section>
@@ -65,14 +79,16 @@
             <section id="clients">
                 <article>
                     <h3>Some of our clients</h3>
-                    <img src="bilder/logo1.png" alt="Logoikon 1">
-                    <img src="bilder/logo2.png" alt="Logoikon 2">
-                    <img src="bilder/logo3.png" alt="Logoikon 3">
+                    <img src="bilder/logo1.png" alt="Logoikon 1" title="Client 1">
+                    <img src="bilder/logo2.png" alt="Logoikon 2" title="Client 2">
+                    <img src="bilder/logo3.png" alt="Logoikon 3" title="Client 3">
                 </article>
             </section>
             <!--Følgende kode har jeg brukt GitHub CoPilot for å finne ut av-->
-            <section id="skjema">
+            <section id="contact-skjema">
                 <h3>Contact us</h3>
+                <div class="grid-container">
+                <article id="skjema">
                 <p>Send us a message</p>
                 <form action="/submit_form" method="post">
                     <label for="name">Name</label><br>
@@ -81,23 +97,25 @@
                     <input type="text" id="name" name="name" placeholder="Subject"><br>
                     <label for="message">Message</label><br>
                     <textarea id="message" name="message"></textarea><br>
-                    <input type="submit" value="Send message">
+                    <input type="submit" value="Send message" class="hover-black">
                 </form>
-            </section>
+                </article>
 
-            <section id="contact-information">
-                <h3>Contact Information</h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
-                    voluptatum deleniti atque corrupti quos dolores et quas molestias 
+                <article id="contact-information">
+                <h4>Contact Information</h4>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus <br>qui blanditiis praesentium 
+                    voluptatum deleniti atque corrupti <br>quos dolores et quas molestias 
                     excepturi sint.</p>
                     <ul>
-                        <li><i class="fa-solid fa-location-pin" style="color: #252525;"></i>B R A Veien 4, 1757 Halden</li>
-                        <li><i class="fa-solid fa-phone" style="color: #252525;"></i>69 60 80 00</li>
-                        <li><i class="fa-solid fa-envelope" style="color: #252525;"></i>postmottak@hiof.no</li>
+                        <li><i class="fa-solid fa-location-pin icon" style="color: #252525;"></i>B R A Veien 4, 1757 Halden</li>
+                        <li><i class="fa-solid fa-phone icon" style="color: #252525;"></i>69 60 80 00</li>
+                        <li><i class="fa-solid fa-envelope icon" style="color: #252525;"></i>postmottak@hiof.no</li>
                     </ul>
+                    </article>
+                </div>
             </section>
 
-            <section>
+            <section> <!--Kode for å få frem kart er hentet fra: https://wcmshelp.ucsc.edu/advanced/embedding-google/google-maps.html-->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.1884410541143!2d11.350233741435268!3d59.12924747462404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2zSMO4Z3Nrb2xlbiBpIMOYc3Rmb2xk!5e0!3m2!1sno!2sno!4v1700434352355!5m2!1sno!2sno" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="full-width-iframe"></iframe>
             </section>
         </main>
@@ -105,14 +123,14 @@
 
         
         <footer>
-            <nav>
-                <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
+            <nav aria-label="Footer navigation">
+                <!--Scroll to top funksjon er hentet fra https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
                 <button onClick="topFunction()" id="top" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
                     <article class="newsletter">
                         <h4>Sign up for our newsletter</h4>
                         <form>
                             <input type="email" placeholder="oda@epost.no" required>
-                            <button type="submit">Sign me up!</button>
+                            <button type="submit" class="hover-black">Sign me up!</button>
                         </form>
                     </article>
 
@@ -120,7 +138,8 @@
                 
                     <div class="footer-flex">
                     <span>
-                        <img src="bilder/logo1.png" alt="Et logoikon">
+                         <a href="index.html" class="logo">
+                            <img src="bilder/logo1.png" alt="Et logoikon"></a> <!--Innhold da dette bildet har en funksjon-->
                     </span>
                         <p>Companyrights Companyname 2023</p>
                     <ul>
@@ -132,6 +151,12 @@
             </nav>
         </footer>
         </div>
+        <!--Scroll to top funksjon er hentet fra https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
+        <script>
+            function topFunction(){
+                document.documentElement.scrollTop=0;
+                }
+        </script>     
     </body>
 
 

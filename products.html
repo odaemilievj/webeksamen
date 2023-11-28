@@ -3,29 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Eksamensoppgave</title>
+        <title>Portfolio: Sjekk ut våre klienter og tidligere arbeid.</title>
+        <!--Kode til metadata har jeg brukt min egen oblig4 som referanse for å huske hva vi har gått igjennom i forelesning-->
+        <meta name="description" content="Portfolio-siden av min eksamensbesvarelse">
+        <meta name="keywords" content="HTML, CSS, JavaScript"> <!--Denne linjen har jeg brukt GitHub CoPilot til, har med Javascript da jeg har brukt det for å få til "Scroll-to-top" funksjon-->
+        <meta name="author" content="Oda Emilie V. Jakobsen">
         <link href="css/icons/css/fontawesome.css" rel="stylesheet">
         <link href="css/icons/css/brands.css" rel="stylesheet">
         <link href="css/icons/css/solid.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+                <!--Følgende kode er Opengraph metadata. I og med at jeg ikke har 
+        publisert nettstedet, velger jeg å sette en # der URL-en til nettstedet skulle vært-->
+        <meta property="ogtitle" content="Velkommen til min eksamensbesvarelse!">
+        <meta property="og:description" content="Dette er en oversikt over klienter og tidligere arbeid.">
+        <meta property="og:image" content="https://placehold.co/600x400/EEE/31343C">
+        <meta property="og:url" content="#">
+        <meta property="og:type" content="'website', 'pictures', 'work'">
+        <!--For å legge til favicon har jeg brukt https://www.w3schools.com/html/html_favicon.asp-->
+        <link rel="icon" href="bilder/logo1.png" type="image/x-icon">
     </head>
 
 
     <body>
         <div id="grid-container">
             <header>
-                <nav>
+                <nav aria-label="Main navigation">
                     <span>
-                        <a href="index.html" class="logo">
-                        <img src="bilder/logo1.png" alt="Et logoikon"></a>
+                        <a href="index.html" class="logo" title="Home">
+                        <img src="bilder/logo1.png" alt="Company-logo"></a> <!--Innhold da dette bildet har en funksjon-->
                     </span>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html" class="active">Portfolio</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#" class="contact-link">Contact</a></li>
+                        <li><a href="index.html" title="Home">Home</a></li>
+                        <li><a href="products.html" class="active" title="Portfolio">Portfolio</a></li>
+                        <li><a href="about.html" title="About">About</a></li>
+                        <!--Koden for å linke til seksjon på annet HTML-dokument brukte jeg GitHub Copilot for å finne ut av-->
+                        <li><a href="about.html#contact-skjema" class="contact-link" title="Contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -33,7 +47,8 @@
         <main>
             <section>
                 <div class="header-index">
-                    <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" id="bilde-port">
+                    <!--Kilde til bildet: https://pixabay.com/no/photos/penn-notisbok-notisblokk-dagbok-4337524/-->
+                    <img src="bilder/computer.jpg" alt="Bilde av laptop, mobil, headset og kaffekopp" id="bilde-port" title="Laptop, mobil, headset og kaffekopp">
                     <div class="overlay-text">
                     <h1>Portfolio</h1>
                 </div>
@@ -43,62 +58,63 @@
             <h2 class="underline">Explore previous jobs</h2>
             <section class="portfolio-seksjon">
                 <ul>
-                    <li><a href="branding" class="port-buttons">Branding</a></li>
-                    <li><a href="design" class="port-buttons">Design</a></li>
-                    <li><a href="design" class="port-buttons">Development</a></li>
+                    <li><a href="#branding" class="port-buttons hover-black" title="Branding">Branding</a></li>
+                    <li><a href="#design" class="port-buttons hover-black" title="Design">Design</a></li>
+                    <li><a href="#development" class="port-buttons hover-black" title="Development">Development</a></li>
                 </ul>
             </section>
-            
-            <h3 class="underline">Branding</h3>
-            <section class="portfolio-seksjon">Branding>
-                <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+            <!--Slik jeg ser det er placeholder-bildene innhold, da jeg tenker at det er logisk at de viser frem hva nettstedet faktisk tilbyr,
+            i motsetning til header-bildene som er der mest for det visuelle-->
+            <h3 class="underline" id="branding">Branding</h3>
+            <section class="portfolio-seksjon">
+                <article> <!--Alle placeholder-bildene er fra https://placehold.co/-->
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde"> 
                     <h4>Et harum quidem</h4>
                 </article>
 
                 <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde">
                     <h4>Et harum quidem</h4>
                 </article>
                     
                 <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde">
+                    <h4>Et harum quidem</h4>
+                </article>
+
+                <article>
+                    <img src="https://placehold.co/400x400" id="design-bilde" alt="Et grått placeholderbilde" title="Placeholder-bilde">
                     <h4>Et harum quidem</h4>
                 </article>
             </section>
 
-            <h3 class="underline">Design</h3>
+            <h3 class="underline" id="design">Design</h3>
             <section class="portfolio-seksjon">
                 <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde">
                     <h4>Et harum quidem</h4>
                 </article>
 
                 <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde">
                     <h4>Et harum quidem</h4>
                 </article>
                     
                 <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
-                    <h4>Et harum quidem</h4>
-                </article>
-
-                <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde">
                     <h4>Et harum quidem</h4>
                 </article>
             </section>
 
-            <h3 class="underline">Development</h3>
+            <h3 class="underline" id="development">Development</h3>
             <section class="portfolio-seksjon">
                 <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde">
                     <h4>Et harum quidem</h4>
                 </article>
 
                 <article>
-                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde">
+                    <img src="https://placehold.co/400x400" alt="Et grått placeholderbilde" title="Placeholder-bilde">
                     <h4>Et harum quidem</h4>
                 </article>
             </section>
@@ -108,23 +124,24 @@
 
         
         <footer>
-            <nav>
-                <!--Scroll to top funksjon er hentet fra www.w3schools.com-->
+            <nav aria-label="Footer navigation">
+                <!--Scroll to top funksjon er hentet fra https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
                 <button onClick="topFunction()" id="top" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button>
                     <article class="newsletter">
                         <h4>Sign up for our newsletter</h4>
                         <form>
                             <input type="email" placeholder="oda@epost.no" required>
-                            <button type="submit">Sign me up!</button>
+                            <button type="submit" class="hover-black">Sign me up!</button>
                         </form>
                     </article>
 
 
                 
                     <div class="footer-flex">
-                    <span>
-                        <img src="bilder/logo1.png" alt="Et logoikon">
-                    </span>
+                        <span>
+                            <a href="index.html" class="logo">
+                                <img src="bilder/logo1.png" alt="Et logoikon"></a> <!--Innhold da dette bildet har en funksjon-->
+                        </span>
                         <p>Companyrights Companyname 2023</p>
                     <ul>
                         <li><a href="https://www.facebook.com"><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i></a></li>
@@ -135,6 +152,12 @@
             </nav>
         </footer>
         </div>
+                <!--Scroll to top funksjon er hentet fra https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
+                <script>
+                    function topFunction(){
+                        document.documentElement.scrollTop=0;
+                        }
+                </script>
     </body>
 
 
