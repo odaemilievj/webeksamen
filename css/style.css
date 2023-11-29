@@ -146,7 +146,7 @@ ul li a.active{
 
 
 .index1 h2{
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
     margin-top: 100px;
 }
@@ -163,7 +163,7 @@ ul li a.active{
 
 
 .index2 h2{
-    font-size: 28px;
+    font-size: 30px;
 }
 
 
@@ -338,9 +338,7 @@ section ul{
 }
 
 section h3{
-        margin-top: 60px;
-        margin-bottom: 60px;
-        font-size: 25px;
+        font-size: 35px;
 }
 
 .portfolio-seksjon img{
@@ -404,10 +402,6 @@ section h3{
     text-align: center;
 }
 
-#clients h3{
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
 
 #clients img{
     margin: 20px;
@@ -520,7 +514,7 @@ form textarea{
 .video{
     display: block;
     width: 100%;
-    height: 350px;
+    height: 415px;
     object-fit: cover;
     opacity: 0.5;
     position: relative;
@@ -582,6 +576,7 @@ nav span img{
 
 .index2 h2{
     margin-top: 100px;
+    font-size: 40px;
 }
 
 
@@ -704,14 +699,44 @@ button[type="submit"] {
 /*-------------------*/
 
 #contact-skjema h3{
-    font-size: 35px;
+    font-size: 40px;
 }
 
 #design-bilde{
     width: 665px;
 }
 
+#contact-button:hover{
+    background-color:#252525;
+    color:#e6bd43;
+}
+
+#clients{
+    padding: 40px;
+}
+
+#clients h3{
+    font-size: 40px;
+}
+
+.index3 h3{
+    font-size: 40px;
+}
+
+.underline{
+    font-size: 40px;
+}
 body{
     max-width: 1600px;
+}
+
+.index1 h2{
+    font-size: 40px;
+}
+
+
+
+.overlay-text h1{
+    font-size: 60px;
 }
 }
