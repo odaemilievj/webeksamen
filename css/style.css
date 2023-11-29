@@ -710,4 +710,8 @@ button[type="submit"] {
 #design-bilde{
     width: 665px;
 }
+
+body{
+    max-width: 1600px;
+}
 }
